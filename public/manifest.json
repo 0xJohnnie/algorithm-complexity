@@ -1,0 +1,17 @@
+{
+  "name": "Algorithm Playground",
+  "short_name": "Algorithm Playground",
+  "description": "Time-Space Complexity",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
