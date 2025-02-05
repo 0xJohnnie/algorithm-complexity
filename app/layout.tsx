@@ -1,5 +1,5 @@
-import Footer from "@/components/footer";
 import Header from "@/components/header";
+import TabBar from "@/components/tab-bar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -38,10 +38,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
+          <div className="flex flex-col h-screen">
             <Header />
-            <main>{children}</main>
-            <Footer />
+            <main className="h-[calc(100dvh-var(--header-height)-var(--footer-height))] overflow-auto">
+              {children}
+            </main>
+            <TabBar />
           </div>
         </ThemeProvider>
       </body>

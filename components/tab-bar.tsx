@@ -33,16 +33,16 @@ function TabItem({ value, href, label }: (typeof TABS)[number]) {
     <TabsTrigger
       value={value}
       asChild
-      className="h-full flex items-center justify-center text-xs sm:text-base"
+      className="h-full flex items-center justify-center text-[10px] sm:text-xs md:text-base"
     >
-      <Link href={href} className="text-center">
+      <Link href={href} className="text-center px-1 sm:px-2">
         {label}
       </Link>
     </TabsTrigger>
   );
 }
 
-export default function Footer() {
+export default function TabBar() {
   const pathname = usePathname();
 
   if (!pathname || !(pathname in ROUTES)) {
@@ -50,10 +50,7 @@ export default function Footer() {
   }
 
   return (
-    <footer
-      className="w-full border-t bg-background"
-      style={{ height: "var(--footer-height)" }}
-    >
+    <div className="w-full h-[var(--footer-height)] border-t bg-background sticky bottom-0">
       <Tabs
         defaultValue={ROUTES[pathname as keyof typeof ROUTES] || ""}
         className="w-full h-full"
@@ -64,6 +61,6 @@ export default function Footer() {
           ))}
         </TabsList>
       </Tabs>
-    </footer>
+    </div>
   );
 }
