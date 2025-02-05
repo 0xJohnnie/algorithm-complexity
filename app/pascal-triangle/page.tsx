@@ -55,7 +55,6 @@ export default function PascalTrianglePage() {
         <TabsTrigger value="visualization">Visualization</TabsTrigger>
         <TabsTrigger value="explanation">Explanation</TabsTrigger>
       </TabsList>
-
       <TabsContent value="visualization" className="flex-grow overflow-auto">
         <div className="flex flex-col h-full">
           <Card className="flex flex-col h-[150px]">
@@ -104,7 +103,6 @@ export default function PascalTrianglePage() {
           )}
         </div>
       </TabsContent>
-
       <TabsContent value="explanation" className="flex-grow overflow-auto">
         <Card className="flex-grow flex flex-col">
           <CardContent className="flex-grow overflow-auto p-4">
@@ -190,6 +188,38 @@ export default function PascalTrianglePage() {
                   </div>
 
                   <hr className="border-muted-foreground/30 my-4" />
+                  <div>
+                    <h4 className="text-sm font-semibold mb-1">
+                      Time optimization strategies
+                    </h4>
+                    <div className="text-xs text-muted-foreground space-y-2">
+                      <ul className="text-xs text-muted-foreground list-disc pl-4">
+                        <li>
+                          Even if we could compute each number in constant time,
+                          we still must output O(n²) numbers
+                        </li>
+                        <li>
+                          This means that any algorithm that explicitly returns
+                          all rows cannot run in less than O(n²) time because it
+                          has to at least &quot;touch&quot; every element
+                        </li>
+                      </ul>
+                      <p>i.e. Parallel Processing: </p>
+                      <ul className="text-xs text-muted-foreground list-disc pl-4">
+                        <li>
+                          Using parallel processing (e.g. Splitting the rows
+                          across multiple cores) can reduce the
+                          &quot;wall-clock&quot; time by distributing the work
+                        </li>
+                        <li>
+                          Though it doesn&apos;t change the fact that the
+                          overall amount of work done is O(n²)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <hr className="border-muted-foreground/30 my-4" />
 
                   <div>
                     <h4 className="text-sm font-semibold mb-1">
@@ -221,7 +251,7 @@ export default function PascalTrianglePage() {
 
                   <div>
                     <h4 className="text-sm font-semibold mb-1">
-                      Optimization Strategies
+                      Space optimization strategies
                     </h4>
                     <div className="text-xs text-muted-foreground space-y-2">
                       <p>
