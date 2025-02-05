@@ -184,7 +184,7 @@ export default function LinkedListCyclePage() {
           </CardContent>
         </Card>
 
-        <Card className="mt-4 flex flex-col h-[calc(100%-270px)]">
+        <Card className="mt-4 flex flex-col h-[calc(100%-300px)]">
           <CardHeader>
             <CardTitle>Result</CardTitle>
           </CardHeader>
@@ -215,7 +215,7 @@ export default function LinkedListCyclePage() {
       <TabsContent value="explanation" className="flex-grow overflow-auto">
         <Card className="h-full flex flex-col">
           <CardContent className="overflow-y-auto flex-grow p-4">
-            <div className="flex flex-col lg:grid lg:grid-cols-[1fr_1fr] gap-6">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
               <div className="space-y-6">
                 <Card className="bg-muted">
                   <CardContent className="p-4">

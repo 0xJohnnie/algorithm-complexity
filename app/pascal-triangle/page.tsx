@@ -56,7 +56,6 @@ export default function PascalTrianglePage() {
         <TabsTrigger value="explanation">Explanation</TabsTrigger>
       </TabsList>
       <TabsContent value="visualization" className="flex-grow overflow-auto">
-        <div className="flex flex-col h-full">
           <Card className="flex flex-col h-[150px]">
             <CardHeader>
               <CardTitle>Pascal&apos;s Triangle Generator</CardTitle>
@@ -79,7 +78,7 @@ export default function PascalTrianglePage() {
           </Card>
 
           {triangle.length > 0 && (
-            <Card className="mt-4 flex flex-col flex-grow">
+          <Card className="mt-4 flex flex-col h-[calc(100%-200px)]">
               <CardHeader>
                 <CardTitle>Result</CardTitle>
               </CardHeader>
@@ -101,12 +100,11 @@ export default function PascalTrianglePage() {
               </CardContent>
             </Card>
           )}
-        </div>
       </TabsContent>
       <TabsContent value="explanation" className="flex-grow overflow-auto">
         <Card className="flex-grow flex flex-col">
           <CardContent className="flex-grow overflow-auto p-4">
-            <div className="flex flex-col lg:grid lg:grid-cols-[1fr_1fr] gap-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
               <div className="space-y-6">
                 <Card className="bg-muted">
                   <CardContent className="p-4">

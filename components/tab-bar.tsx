@@ -50,7 +50,7 @@ export default function TabBar() {
   }
 
   return (
-    <div className="w-full h-[var(--footer-height)] border-t bg-background sticky bottom-0">
+    <div className="h-[var(--footer-height)] bg-background sticky bottom-5 p-0 mx-4">
       <Tabs
         defaultValue={ROUTES[pathname as keyof typeof ROUTES] || ""}
         className="w-full h-full"
