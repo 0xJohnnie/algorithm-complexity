@@ -142,7 +142,7 @@ export default function LinkedListCyclePage() {
 
   return (
     <Tabs defaultValue="visualization" className="flex flex-col h-full p-4">
-      <TabsList className="grid w-full grid-cols-2 h-[48]">
+      <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="visualization">Visualization</TabsTrigger>
         <TabsTrigger value="explanation">Explanation</TabsTrigger>
       </TabsList>
